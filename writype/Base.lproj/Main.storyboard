@@ -20,14 +20,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXp-Ka-T0j">
                                 <rect key="frame" x="255" y="155" width="90" height="30"/>
                                 <state key="normal" title="フォント作成"/>
+                                <connections>
+                                    <segue destination="xHC-Wz-D9Y" kind="show" id="Rcw-cj-kvo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUo-Z9-xhY">
                                 <rect key="frame" x="255" y="285" width="90" height="30"/>
                                 <state key="normal" title="フォント検索"/>
+                                <connections>
+                                    <segue destination="JPE-m1-zgr" kind="show" id="HzG-To-NVK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASu-N6-wO6">
                                 <rect key="frame" x="255" y="415" width="90" height="30"/>
                                 <state key="normal" title="レポート作成"/>
+                                <connections>
+                                    <segue destination="qAz-f9-JnJ" kind="show" id="ydw-GO-2uw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
