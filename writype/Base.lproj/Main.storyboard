@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FTo-Q0-Afs">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -16,11 +16,179 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUo-Z9-xhY">
+                                <rect key="frame" x="256" y="285" width="90" height="30"/>
+                                <state key="normal" title="フォント選定"/>
+                                <connections>
+                                    <segue destination="JPE-m1-zgr" kind="show" id="HzG-To-NVK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASu-N6-wO6">
+                                <rect key="frame" x="256" y="415" width="90" height="30"/>
+                                <state key="normal" title="レポート作成"/>
+                                <connections>
+                                    <segue destination="qAz-f9-JnJ" kind="show" id="ydw-GO-2uw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXp-Ka-T0j">
+                                <rect key="frame" x="256" y="155" width="90" height="30"/>
+                                <state key="normal" title="フォント作成"/>
+                                <connections>
+                                    <segue destination="xHC-Wz-D9Y" kind="show" id="Rcw-cj-kvo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xXp-Ka-T0j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6X1-SE-hcl"/>
+                            <constraint firstItem="ASu-N6-wO6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GI6-GL-Zik"/>
+                            <constraint firstItem="bUo-Z9-xhY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NES-Tl-O7K"/>
+                            <constraint firstItem="ASu-N6-wO6" firstAttribute="top" secondItem="bUo-Z9-xhY" secondAttribute="bottom" constant="100" id="WpU-sw-gIi"/>
+                            <constraint firstItem="bUo-Z9-xhY" firstAttribute="top" secondItem="xXp-Ka-T0j" secondAttribute="bottom" constant="100" id="YRe-fG-bkT"/>
+                            <constraint firstItem="bUo-Z9-xhY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zbR-2M-foJ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JPl-6s-pa1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1747" y="110"/>
+        </scene>
+        <!--フォント作成-->
+        <scene sceneID="mW8-uZ-Te9">
+            <objects>
+                <viewController title="フォント作成" id="xHC-Wz-D9Y" customClass="CreateFontViewController" customModule="writype" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="erp-Mb-yGl"/>
+                        <viewControllerLayoutGuide type="bottom" id="D0F-2C-f5T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cS9-ws-utd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GnE-pY-NCS">
+                                <rect key="frame" x="180" y="180" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="RJG-e2-USd"/>
+                                    <constraint firstAttribute="height" constant="240" id="caU-fm-Teq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZZ-b3-S1J">
+                                <rect key="frame" x="180" y="420" width="240" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.68531610009999999" blue="0.29679632589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="L44-79-iCc"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ndr-lg-Jcl"/>
+                                    <constraint firstAttribute="height" constant="50" id="NwP-dS-m5c"/>
+                                    <constraint firstAttribute="height" constant="50" id="yjx-x9-6os"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ndr-lg-Jcl"/>
+                                        <exclude reference="yjx-x9-6os"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZV-c9-LfA">
+                                <rect key="frame" x="294" y="434" width="12" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCn-M2-fSG">
+                                <rect key="frame" x="136" y="285" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljs-GQ-F66">
+                                <rect key="frame" x="428" y="285" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="オリジナルフォントを作成します" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRw-gZ-tzx">
+                                <rect key="frame" x="173" y="114" width="255" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99299399349999995" green="0.95167120250000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GnE-pY-NCS" firstAttribute="leading" secondItem="mCn-M2-fSG" secondAttribute="trailing" constant="10" id="99Q-dM-fg6"/>
+                            <constraint firstItem="GnE-pY-NCS" firstAttribute="centerY" secondItem="cS9-ws-utd" secondAttribute="centerY" id="Hit-mg-0la"/>
+                            <constraint firstItem="BRw-gZ-tzx" firstAttribute="centerX" secondItem="cS9-ws-utd" secondAttribute="centerX" id="Jb4-9V-hsL"/>
+                            <constraint firstItem="BRw-gZ-tzx" firstAttribute="top" secondItem="erp-Mb-yGl" secondAttribute="bottom" constant="50" id="Jz6-oW-jq9"/>
+                            <constraint firstItem="mCn-M2-fSG" firstAttribute="centerY" secondItem="cS9-ws-utd" secondAttribute="centerY" id="RPu-R4-XHP"/>
+                            <constraint firstItem="JZZ-b3-S1J" firstAttribute="centerX" secondItem="cS9-ws-utd" secondAttribute="centerX" id="WrB-7O-bPr"/>
+                            <constraint firstItem="ljs-GQ-F66" firstAttribute="leading" secondItem="GnE-pY-NCS" secondAttribute="trailing" constant="8" symbolic="YES" id="bce-PU-meU"/>
+                            <constraint firstItem="JZZ-b3-S1J" firstAttribute="top" secondItem="GnE-pY-NCS" secondAttribute="bottom" id="dJ7-31-HPk"/>
+                            <constraint firstItem="GnE-pY-NCS" firstAttribute="centerX" secondItem="cS9-ws-utd" secondAttribute="centerX" id="e48-8O-Zcm"/>
+                            <constraint firstItem="ljs-GQ-F66" firstAttribute="centerY" secondItem="cS9-ws-utd" secondAttribute="centerY" id="lr5-rW-Ujx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="フォント作成" id="2cR-Ha-kDm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S2Z-ju-ca5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2554" y="-364"/>
+        </scene>
+        <!--レポート作成-->
+        <scene sceneID="9O6-iN-SIl">
+            <objects>
+                <viewController id="qAz-f9-JnJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9gu-OK-xng"/>
+                        <viewControllerLayoutGuide type="bottom" id="BDU-4Q-dAf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dro-e4-CP5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.10537154949999999" green="0.65721122379999997" blue="0.167617817" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="レポート作成" id="vXB-nb-drk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DRm-Dt-Qtw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2478" y="1000"/>
+        </scene>
+        <!--フォント選定-->
+        <scene sceneID="fLO-n6-4en">
+            <objects>
+                <viewController id="JPE-m1-zgr" customClass="SearchFontViewController" customModule="writype" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2V0-Bg-THi"/>
+                        <viewControllerLayoutGuide type="bottom" id="wrT-8w-x2g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="czO-RI-w6S">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.47514377670000002" blue="0.1273299557" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.46062999449999997" green="1" blue="0.45492435580000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="フォント選定" id="Lh3-VR-VBF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxF-Qm-0q0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2484" y="272"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OWP-kX-XKD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FTo-Q0-Afs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IeW-qs-Ogw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2Vl-Nm-SbL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4wK-ve-qZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1027" y="110"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.10435294790000001" green="0.48123998740000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
