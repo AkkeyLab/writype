@@ -18,6 +18,7 @@
 		6627A52D1D72AF3600221C25 /* CreateReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A52C1D72AF3600221C25 /* CreateReportViewController.swift */; };
 		6627A52F1D72AF4200221C25 /* CharacterTableVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A52E1D72AF4200221C25 /* CharacterTableVIewController.swift */; };
 		6627A5311D72AF5100221C25 /* CreateFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A5301D72AF5100221C25 /* CreateFontViewController.swift */; };
+		6627A5361D72C9FC00221C25 /* EPSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A5351D72C9FC00221C25 /* EPSignatureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		6627A52C1D72AF3600221C25 /* CreateReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateReportViewController.swift; path = ViewController/CreateReport/CreateReportViewController.swift; sourceTree = "<group>"; };
 		6627A52E1D72AF4200221C25 /* CharacterTableVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterTableVIewController.swift; path = ViewController/CharacterTable/CharacterTableVIewController.swift; sourceTree = "<group>"; };
 		6627A5301D72AF5100221C25 /* CreateFontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateFontViewController.swift; path = ViewController/CreateFont/CreateFontViewController.swift; sourceTree = "<group>"; };
+		6627A5351D72C9FC00221C25 /* EPSignatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EPSignatureView.swift; path = View/EPSignatureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				6627A5321D72AF6E00221C25 /* Storyboard */,
 				6627A5201D72ADCA00221C25 /* EPExtensions.swift */,
+				6627A5351D72C9FC00221C25 /* EPSignatureView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				6627A5211D72ADCA00221C25 /* EPExtensions.swift in Sources */,
 				6627A5311D72AF5100221C25 /* CreateFontViewController.swift in Sources */,
 				2C2527AB1D3D197000B58239 /* AppDelegate.swift in Sources */,
+				6627A5361D72C9FC00221C25 /* EPSignatureView.swift in Sources */,
 				6627A52B1D72AF1400221C25 /* SearchFontViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
