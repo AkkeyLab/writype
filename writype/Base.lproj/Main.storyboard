@@ -38,7 +38,7 @@
                                 <rect key="frame" x="256" y="155" width="90" height="30"/>
                                 <state key="normal" title="フォント作成"/>
                                 <connections>
-                                    <segue destination="xHC-Wz-D9Y" kind="show" id="Rcw-cj-kvo"/>
+                                    <action selector="createFont:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jc6-D5-DYt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,6 +61,7 @@
         <!--フォント作成-->
         <scene sceneID="mW8-uZ-Te9">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S2Z-ju-ca5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="フォント作成" id="xHC-Wz-D9Y" customClass="CreateFontViewController" customModule="writype" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="erp-Mb-yGl"/>
@@ -98,7 +99,7 @@
                                     <constraint firstItem="xoR-EF-4iZ" firstAttribute="leading" secondItem="HvS-eK-SmG" secondAttribute="leading" constant="8" id="yc2-5G-GRu"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qba-6G-lfB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qba-6G-lfB" customClass="EPSignatureView" customModule="writype" customModuleProvider="target">
                                 <rect key="frame" x="180" y="180" width="240" height="240"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WT-fv-S0d">
@@ -231,7 +232,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="フォント作成" id="2cR-Ha-kDm"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S2Z-ju-ca5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2562" y="-604"/>
         </scene>
