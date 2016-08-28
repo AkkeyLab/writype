@@ -92,7 +92,7 @@ public class CreateFontViewController: UIViewController {
     // MARK: - Button Actions
 
     func onTouchCancelButton() {
-        signatureDelegate?.epSignature!(self, didCancel: NSError(domain: "EPSignatureDomain", code: 1, userInfo: [NSLocalizedDescriptionKey: "User not signed"]))
+//        signatureDelegate?.epSignature!(self, didCancel: NSError(domain: "EPSignatureDomain", code: 1, userInfo: [NSLocalizedDescriptionKey: "User not signed"]))
         dismissViewControllerAnimated(true, completion: nil)
     }
 
@@ -103,7 +103,7 @@ public class CreateFontViewController: UIViewController {
 //                let filePath = (docPath! as NSString).stringByAppendingPathComponent("sig.data")
 //                signatureView.saveSignature(filePath)
 //            }
-            signatureDelegate?.epSignature!(self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
+//            signatureDelegate?.epSignature!(self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
             dismissViewControllerAnimated(true, completion: nil)
         } else {
             showAlert("You did not sign", andTitle: "Please draw your signature")
