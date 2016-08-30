@@ -267,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRm-Dt-Qtw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2562" y="879"/>
+            <point key="canvasLocation" x="2578" y="1003"/>
         </scene>
         <!--フォント選定-->
         <scene sceneID="fLO-n6-4en">
