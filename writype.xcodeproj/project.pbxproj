@@ -18,9 +18,9 @@
 		6627A52F1D72AF4200221C25 /* CharacterTableVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A52E1D72AF4200221C25 /* CharacterTableVIewController.swift */; };
 		6627A5311D72AF5100221C25 /* CreateFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A5301D72AF5100221C25 /* CreateFontViewController.swift */; };
 		6627A53A1D72D0E200221C25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A5391D72D0E200221C25 /* ViewController.swift */; };
-		6627A53C1D72D82700221C25 /* EPSignatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6627A53B1D72D82700221C25 /* EPSignatureViewController.xib */; };
 		6627A53F1D72DF9A00221C25 /* EPSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A53E1D72DF9A00221C25 /* EPSignatureView.swift */; };
 		6627A5411D72DFA300221C25 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A5401D72DFA300221C25 /* EPExtensions.swift */; };
+		6627A5961D756B7A00221C25 /* EPSignatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6627A5951D756B7A00221C25 /* EPSignatureViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +58,9 @@
 		6627A52E1D72AF4200221C25 /* CharacterTableVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterTableVIewController.swift; path = ViewController/CharacterTable/CharacterTableVIewController.swift; sourceTree = "<group>"; };
 		6627A5301D72AF5100221C25 /* CreateFontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateFontViewController.swift; path = ViewController/CreateFont/CreateFontViewController.swift; sourceTree = "<group>"; };
 		6627A5391D72D0E200221C25 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewController/ViewController.swift; sourceTree = "<group>"; };
-		6627A53B1D72D82700221C25 /* EPSignatureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EPSignatureViewController.xib; sourceTree = "<group>"; };
 		6627A53E1D72DF9A00221C25 /* EPSignatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EPSignatureView.swift; path = View/CreateFont/EPSignatureView.swift; sourceTree = "<group>"; };
 		6627A5401D72DFA300221C25 /* EPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EPExtensions.swift; path = View/CreateFont/EPExtensions.swift; sourceTree = "<group>"; };
+		6627A5951D756B7A00221C25 /* EPSignatureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EPSignatureViewController.xib; path = Layout/EPSignatureViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,13 +111,9 @@
 		2C2527A91D3D197000B58239 /* writype */ = {
 			isa = PBXGroup;
 			children = (
-				6627A5251D72AE0800221C25 /* ViewModel */,
-				6627A5241D72ADFE00221C25 /* View */,
-				6627A5231D72ADF100221C25 /* ViewController */,
-				6627A5221D72ADE700221C25 /* Model */,
-				6627A51F1D72A66600221C25 /* CreateFont */,
+				6627A58D1D7569DC00221C25 /* Classes */,
+				6627A58E1D756A3D00221C25 /* Resources */,
 				2C2527AA1D3D197000B58239 /* AppDelegate.swift */,
-				2C2527B11D3D197100B58239 /* Assets.xcassets */,
 				2C2527B61D3D197100B58239 /* Info.plist */,
 			);
 			path = writype;
@@ -141,20 +137,6 @@
 			path = writypeUITests;
 			sourceTree = "<group>";
 		};
-		6627A51F1D72A66600221C25 /* CreateFont */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CreateFont;
-			sourceTree = "<group>";
-		};
-		6627A5221D72ADE700221C25 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		6627A5231D72ADF100221C25 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				6627A53D1D72DF3800221C25 /* CreateFont */,
-				6627A5321D72AF6E00221C25 /* Storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -229,7 +210,74 @@
 			children = (
 				6627A5401D72DFA300221C25 /* EPExtensions.swift */,
 				6627A53E1D72DF9A00221C25 /* EPSignatureView.swift */,
-				6627A53B1D72D82700221C25 /* EPSignatureViewController.xib */,
+			);
+			name = CreateFont;
+			sourceTree = "<group>";
+		};
+		6627A58D1D7569DC00221C25 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6627A5931D756AC700221C25 /* Layout */,
+				6627A5921D756AA300221C25 /* Utility */,
+				6627A5911D756A8100221C25 /* Config */,
+				6627A5901D756A7200221C25 /* Model */,
+				6627A5251D72AE0800221C25 /* ViewModel */,
+				6627A5241D72ADFE00221C25 /* View */,
+				6627A5231D72ADF100221C25 /* ViewController */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		6627A58E1D756A3D00221C25 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C2527B11D3D197100B58239 /* Assets.xcassets */,
+				6627A58F1D756A5B00221C25 /* Font */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6627A58F1D756A5B00221C25 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		6627A5901D756A7200221C25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6627A5911D756A8100221C25 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		6627A5921D756AA300221C25 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		6627A5931D756AC700221C25 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				6627A5941D756AFC00221C25 /* CreateFont */,
+				6627A5321D72AF6E00221C25 /* Storyboard */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
+		6627A5941D756AFC00221C25 /* CreateFont */ = {
+			isa = PBXGroup;
+			children = (
+				6627A5951D756B7A00221C25 /* EPSignatureViewController.xib */,
 			);
 			name = CreateFont;
 			sourceTree = "<group>";
@@ -340,8 +388,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6627A5961D756B7A00221C25 /* EPSignatureViewController.xib in Resources */,
 				2C2527B51D3D197100B58239 /* LaunchScreen.storyboard in Resources */,
-				6627A53C1D72D82700221C25 /* EPSignatureViewController.xib in Resources */,
 				2C2527B21D3D197100B58239 /* Assets.xcassets in Resources */,
 				2C2527B01D3D197100B58239 /* Main.storyboard in Resources */,
 			);
