@@ -11,6 +11,7 @@ import UIKit
 class CreateReportViewController: UIViewController {
 
     @IBOutlet weak var reportText: UITextView!
+    var saveText = ""
     @IBAction func previewButton(sender: AnyObject) {
     }
    
@@ -20,12 +21,17 @@ class CreateReportViewController: UIViewController {
     }
     
     @IBAction func saveButton(sender: AnyObject) {
+        saveText = reportText.text
+    }
+   
+    @IBAction func refreshButton(sender: AnyObject) {
+        reportText.text = saveText
     }
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        reportText.text = ""
         // Do any additional setup after loading the view.
     }
 

@@ -276,9 +276,14 @@
                                     <action selector="deleteButton:" destination="qAz-f9-JnJ" id="KdE-3M-eJD"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="download" id="DkP-Gl-rYX">
+                            <barButtonItem title="save" image="download" id="DkP-Gl-rYX">
                                 <connections>
                                     <action selector="saveButton:" destination="qAz-f9-JnJ" id="d6Z-UC-Yzr"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="x5f-L3-bJW">
+                                <connections>
+                                    <action selector="refreshButton:" destination="qAz-f9-JnJ" id="xnd-mo-NUK"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -289,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRm-Dt-Qtw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2438" y="1039"/>
+            <point key="canvasLocation" x="2211" y="1032"/>
         </scene>
         <!--フォント選定-->
         <scene sceneID="fLO-n6-4en">
