@@ -6,6 +6,7 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -61,7 +62,6 @@
         <!--フォント作成-->
         <scene sceneID="mW8-uZ-Te9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S2Z-ju-ca5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="フォント作成" id="xHC-Wz-D9Y" customClass="CreateFontViewController" customModule="writype" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="erp-Mb-yGl"/>
@@ -71,16 +71,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HvS-eK-SmG">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HvS-eK-SmG">
                                 <rect key="frame" x="0.0" y="64" width="600" height="96"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="オリジナルフォントを作成します" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRw-gZ-tzx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="オリジナルフォントを作成します" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRw-gZ-tzx">
                                         <rect key="frame" x="8" y="37" width="584" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="枠内に文字を書きましょう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoR-EF-4iZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="枠内に文字を書きましょう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoR-EF-4iZ">
                                         <rect key="frame" x="8" y="66" width="584" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.4468907828" green="0.4468907828" blue="0.4468907828" alpha="1" colorSpace="calibratedRGB"/>
@@ -106,7 +106,7 @@
                                         <rect key="frame" x="0.0" y="219" width="240" height="21"/>
                                         <color key="backgroundColor" red="0.078431372550000003" green="0.64705882349999999" blue="1" alpha="0.20008973817567557" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -159,7 +159,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="（１/６０）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGw-OV-JE3">
                                         <rect key="frame" x="8" y="65" width="584" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3z-Jh-OFF">
@@ -232,13 +232,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="フォント作成" id="2cR-Ha-kDm"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S2Z-ju-ca5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2562" y="-604"/>
         </scene>
         <!--レポート作成-->
         <scene sceneID="9O6-iN-SIl">
             <objects>
-                <viewController id="qAz-f9-JnJ" sceneMemberID="viewController">
+                <viewController id="qAz-f9-JnJ" customClass="CreateReportViewController" customModule="writype" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9gu-OK-xng"/>
                         <viewControllerLayoutGuide type="bottom" id="BDU-4Q-dAf"/>
@@ -246,13 +247,54 @@
                     <view key="view" contentMode="scaleToFill" id="Dro-e4-CP5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="umi-bY-qtk">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="0.10537154949999999" green="0.65721122379999997" blue="0.167617817" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BDU-4Q-dAf" firstAttribute="top" secondItem="umi-bY-qtk" secondAttribute="bottom" id="HLp-4L-mSM"/>
+                            <constraint firstItem="umi-bY-qtk" firstAttribute="top" secondItem="9gu-OK-xng" secondAttribute="bottom" id="JHo-CO-hnB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="umi-bY-qtk" secondAttribute="trailing" id="MBm-hj-OUP"/>
+                            <constraint firstItem="umi-bY-qtk" firstAttribute="leading" secondItem="Dro-e4-CP5" secondAttribute="leadingMargin" id="YH1-iZ-TUf"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="レポート作成" id="vXB-nb-drk"/>
+                    <navigationItem key="navigationItem" title="レポート作成" id="vXB-nb-drk">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Preview" id="kGW-pG-YMy">
+                                <connections>
+                                    <action selector="previewButton:" destination="qAz-f9-JnJ" id="nCX-xk-TsD"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="QkR-uX-eJt">
+                                <connections>
+                                    <action selector="deleteButton:" destination="qAz-f9-JnJ" id="KdE-3M-eJD"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="save" image="download" id="DkP-Gl-rYX">
+                                <connections>
+                                    <action selector="saveButton:" destination="qAz-f9-JnJ" id="d6Z-UC-Yzr"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="x5f-L3-bJW">
+                                <connections>
+                                    <action selector="refreshButton:" destination="qAz-f9-JnJ" id="xnd-mo-NUK"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="reportText" destination="umi-bY-qtk" id="5Qn-lb-Izm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRm-Dt-Qtw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2562" y="879"/>
+            <point key="canvasLocation" x="2211" y="1032"/>
         </scene>
         <!--フォント選定-->
         <scene sceneID="fLO-n6-4en">
@@ -293,5 +335,8 @@
             <point key="canvasLocation" x="1027" y="110"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="download" width="30" height="30"/>
+    </resources>
     <color key="tintColor" red="0.10435294790000001" green="0.48123998740000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
