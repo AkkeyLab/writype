@@ -13,6 +13,7 @@
 		2C2527B51D3D197100B58239 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C2527B31D3D197100B58239 /* LaunchScreen.storyboard */; };
 		2C2527C01D3D197100B58239 /* writypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2527BF1D3D197100B58239 /* writypeTests.swift */; };
 		2C2527CB1D3D197100B58239 /* writypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2527CA1D3D197100B58239 /* writypeUITests.swift */; };
+		2CCFF2241D92D86700077B9E /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFF2231D92D86700077B9E /* PreviewViewController.swift */; };
 		6627A52B1D72AF1400221C25 /* SearchFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A52A1D72AF1400221C25 /* SearchFontViewController.swift */; };
 		6627A52D1D72AF3600221C25 /* CreateReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A52C1D72AF3600221C25 /* CreateReportViewController.swift */; };
 		6627A52F1D72AF4200221C25 /* CharacterTableVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A52E1D72AF4200221C25 /* CharacterTableVIewController.swift */; };
@@ -53,6 +54,7 @@
 		2C2527C61D3D197100B58239 /* writypeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = writypeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2527CA1D3D197100B58239 /* writypeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writypeUITests.swift; sourceTree = "<group>"; };
 		2C2527CC1D3D197100B58239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CCFF2231D92D86700077B9E /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewViewController.swift; path = ViewController/CreateReport/PreviewViewController.swift; sourceTree = "<group>"; };
 		6627A52A1D72AF1400221C25 /* SearchFontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchFontViewController.swift; path = ViewController/SearchFont/SearchFontViewController.swift; sourceTree = "<group>"; };
 		6627A52C1D72AF3600221C25 /* CreateReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateReportViewController.swift; path = ViewController/CreateReport/CreateReportViewController.swift; sourceTree = "<group>"; };
 		6627A52E1D72AF4200221C25 /* CharacterTableVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterTableVIewController.swift; path = ViewController/CharacterTable/CharacterTableVIewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				6627A52C1D72AF3600221C25 /* CreateReportViewController.swift */,
+				2CCFF2231D92D86700077B9E /* PreviewViewController.swift */,
 			);
 			name = CreateReport;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				6627A53A1D72D0E200221C25 /* ViewController.swift in Sources */,
 				6627A53F1D72DF9A00221C25 /* EPSignatureView.swift in Sources */,
 				6627A52B1D72AF1400221C25 /* SearchFontViewController.swift in Sources */,
+				2CCFF2241D92D86700077B9E /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
