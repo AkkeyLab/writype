@@ -37,10 +37,14 @@ class PreviewViewController: UIViewController {
         
         let countString:Int = (text1?.characters.count)!
         for i in 0..<countString {
-            if characters![i] == " " {  //空白
+            switch characters![i] {
+            case " ":
                 totalWidth += 30
-            }else{
-                initImageView(characters![i] + ".png" )
+            case "\n":
+                totalWidth = 50
+                totalHeight += 50
+            default:
+                initImageView(characters![i] + ".png")
             }
         }
     }
