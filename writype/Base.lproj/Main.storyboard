@@ -253,7 +253,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="alphabet"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.10537154949999999" green="0.65721122379999997" blue="0.167617817" alpha="1" colorSpace="calibratedRGB"/>
@@ -269,6 +269,7 @@
                             <barButtonItem title="Preview" id="kGW-pG-YMy">
                                 <connections>
                                     <action selector="previewButton:" destination="qAz-f9-JnJ" id="nCX-xk-TsD"/>
+                                    <segue destination="y0b-54-nba" kind="show" id="fWd-9s-J35"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="trash" id="QkR-uX-eJt">
@@ -294,7 +295,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRm-Dt-Qtw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2211" y="1032"/>
+            <point key="canvasLocation" x="1753" y="936"/>
+        </scene>
+        <!--Preview-->
+        <scene sceneID="r2j-le-R5m">
+            <objects>
+                <viewController id="y0b-54-nba" customClass="PreviewViewController" customModule="writype" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ytA-sq-Tqt"/>
+                        <viewControllerLayoutGuide type="bottom" id="vqw-F2-Jly"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jqw-TY-0YT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Preview" id="A16-0D-eTL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NAi-bO-L8g">
+                            <connections>
+                                <action selector="zoomUpButton:" destination="y0b-54-nba" id="aV6-h9-YIM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5AG-LM-Zyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2515" y="936"/>
         </scene>
         <!--フォント選定-->
         <scene sceneID="fLO-n6-4en">

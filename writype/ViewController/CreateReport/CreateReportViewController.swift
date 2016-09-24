@@ -39,6 +39,12 @@ class CreateReportViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var previewViewController = segue.destinationViewController as! PreviewViewController
+        previewViewController.text1 = reportText.text
+    }
 
     /*
      // MARK: - Navigation
