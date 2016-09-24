@@ -302,12 +302,12 @@
             <objects>
                 <viewController id="y0b-54-nba" customClass="PreviewViewController" customModule="writype" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ytA-sq-Tqt"/>
-                        <viewControllerLayoutGuide type="bottom" id="vqw-F2-Jly"/>
+                        <viewControllerLayoutGuide type="top" id="J3U-Hh-0ef"/>
+                        <viewControllerLayoutGuide type="bottom" id="cbt-Tt-Pht"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jqw-TY-0YT">
+                    <view key="view" contentMode="scaleToFill" id="z8g-Vy-6TG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Preview" id="A16-0D-eTL">
@@ -317,10 +317,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="view" destination="z8g-Vy-6TG" id="qmC-qV-Ctn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5AG-LM-Zyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2515" y="936"/>
+            <point key="canvasLocation" x="2638" y="949"/>
         </scene>
         <!--フォント選定-->
         <scene sceneID="fLO-n6-4en">

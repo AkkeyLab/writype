@@ -14,6 +14,7 @@
 		2C2527C01D3D197100B58239 /* writypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2527BF1D3D197100B58239 /* writypeTests.swift */; };
 		2C2527CB1D3D197100B58239 /* writypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2527CA1D3D197100B58239 /* writypeUITests.swift */; };
 		2CCFF2241D92D86700077B9E /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCFF2231D92D86700077B9E /* PreviewViewController.swift */; };
+		2CCFF22E1D9649D600077B9E /* BigShot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCFF22D1D9649D600077B9E /* BigShot.framework */; };
 		6627A52B1D72AF1400221C25 /* SearchFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A52A1D72AF1400221C25 /* SearchFontViewController.swift */; };
 		6627A52D1D72AF3600221C25 /* CreateReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A52C1D72AF3600221C25 /* CreateReportViewController.swift */; };
 		6627A52F1D72AF4200221C25 /* CharacterTableVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A52E1D72AF4200221C25 /* CharacterTableVIewController.swift */; };
@@ -55,6 +56,8 @@
 		2C2527CA1D3D197100B58239 /* writypeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writypeUITests.swift; sourceTree = "<group>"; };
 		2C2527CC1D3D197100B58239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CCFF2231D92D86700077B9E /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewViewController.swift; path = ViewController/CreateReport/PreviewViewController.swift; sourceTree = "<group>"; };
+		2CCFF2271D961E1500077B9E /* 0B7FEC51-4F15-3B05-8701-16D98BDA0D10.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; name = "0B7FEC51-4F15-3B05-8701-16D98BDA0D10.bcsymbolmap"; path = "Carthage/Build/iOS/0B7FEC51-4F15-3B05-8701-16D98BDA0D10.bcsymbolmap"; sourceTree = "<group>"; };
+		2CCFF22D1D9649D600077B9E /* BigShot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BigShot.framework; path = Carthage/Build/iOS/BigShot.framework; sourceTree = "<group>"; };
 		6627A52A1D72AF1400221C25 /* SearchFontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchFontViewController.swift; path = ViewController/SearchFont/SearchFontViewController.swift; sourceTree = "<group>"; };
 		6627A52C1D72AF3600221C25 /* CreateReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateReportViewController.swift; path = ViewController/CreateReport/CreateReportViewController.swift; sourceTree = "<group>"; };
 		6627A52E1D72AF4200221C25 /* CharacterTableVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterTableVIewController.swift; path = ViewController/CharacterTable/CharacterTableVIewController.swift; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCFF22E1D9649D600077B9E /* BigShot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +97,8 @@
 		2C25279E1D3D197000B58239 = {
 			isa = PBXGroup;
 			children = (
+				2CCFF22D1D9649D600077B9E /* BigShot.framework */,
+				2CCFF2271D961E1500077B9E /* 0B7FEC51-4F15-3B05-8701-16D98BDA0D10.bcsymbolmap */,
 				2C2527A91D3D197000B58239 /* writype */,
 				2C2527BE1D3D197100B58239 /* writypeTests */,
 				2C2527C91D3D197100B58239 /* writypeUITests */,
@@ -295,6 +301,8 @@
 				2C2527A31D3D197000B58239 /* Sources */,
 				2C2527A41D3D197000B58239 /* Frameworks */,
 				2C2527A51D3D197000B58239 /* Resources */,
+				2CCFF22B1D961E3F00077B9E /* ShellScript */,
+				2CCFF22F1D964EC800077B9E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -413,6 +421,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CCFF22B1D961E3F00077B9E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		2CCFF22F1D964EC800077B9E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/BigShot.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C2527A31D3D197000B58239 /* Sources */ = {
@@ -572,6 +610,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = writype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.app.writype;
@@ -584,6 +626,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = writype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akkeylab.app.writype;
