@@ -74,7 +74,7 @@ class PreviewViewController: UIViewController {
         let imageView = UIImageView(image:image1)
         
         // 画像の幅・高さの取得
-        imageWidth = image1.size.width
+        imageWidth = image1.size.width - 20
         imageHeight = image1.size.height
         
         //画像サイズ
@@ -97,7 +97,7 @@ class PreviewViewController: UIViewController {
         totalWidth += imageWidth * scale + imageBetweenWidth
         if(totalWidth > screenWidth){
             totalWidth = 50
-            totalHeight += 50
+            totalHeight += imageHeight * scale + 10
         }
     }
     
