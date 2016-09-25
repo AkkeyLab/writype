@@ -24,7 +24,7 @@ class PreviewViewController: UIViewController {
     
     
     var scale:CGFloat = 0.3 //拡大,縮小比率
-    var imageBetweenWidth:CGFloat = 10 //文字間の幅
+    var imageBetweenWidth:CGFloat = -20 //文字間の幅
     
     
 
@@ -50,7 +50,7 @@ class PreviewViewController: UIViewController {
     }
     
     @IBAction func zoomUpButton(sender: AnyObject) {
-        scale += 1.0
+        scale += 0.02
         
 //        let view: UIImageView = UIImageView()
 //        view.removeFromSuperview()
