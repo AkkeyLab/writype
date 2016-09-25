@@ -13,28 +13,21 @@ class PreviewViewController: UIViewController {
     var text1: String?
     
     var imageView:UIImageView!
+    
     //各画像の幅、高さ
     var imageWidth:CGFloat = 0
     var imageHeight:CGFloat = 0
     
     //描画した幅、高さ
-    var totalWidth:CGFloat = 20
-    var totalHeight:CGFloat = 100
+    var totalWidth:CGFloat = 50
+    var totalHeight:CGFloat = 200
     
     
-    var scale:CGFloat = 5.0 //拡大,縮小比率
-    var imageBetweenWidth:CGFloat = 10 //文字間の幅
+    var scale:CGFloat = 0.3 //拡大,縮小比率
+    var imageBetweenWidth:CGFloat = -20 //文字間の幅
     
     
-    @IBAction func zoomUpButton(sender: AnyObject) {
-        scale += 1.0
-        
-        let view: UIImageView = UIImageView()
-        view.removeFromSuperview()
-        
-        viewDidLoad()
-        
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,15 +37,27 @@ class PreviewViewController: UIViewController {
         
         let countString:Int = (text1?.characters.count)!
         for i in 0..<countString {
-            if characters![i] == " " {  //空白
-                totalWidth += 20
-            }else{
-                initImageView(characters![i] + ".png" )
+            switch characters![i] {
+            case " ":
+                totalWidth += 30
+            case "\n":
+                totalWidth = 50
+                totalHeight += 50
+            default:
+                initImageView("alphabet/" + characters![i] + ".jpg")
             }
         }
     }
     
-    
+    @IBAction func zoomUpButton(sender: AnyObject) {
+        scale += 0.02
+        
+//        let view: UIImageView = UIImageView()
+//        view.removeFromSuperview()
+        
+        viewDidLoad()
+        
+    }
     
     //画像を配置する場所の更新
     func updateImageLocation(imgWidth:CGFloat,imgHeight:CGFloat) {
@@ -102,4 +107,7 @@ class PreviewViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
 }
