@@ -20,10 +20,10 @@ class PreviewViewController: UIViewController {
     
     //描画した幅、高さ
     var totalWidth:CGFloat = 50
-    var totalHeight:CGFloat = 100
+    var totalHeight:CGFloat = 200
     
     
-    var scale:CGFloat = 5.0 //拡大,縮小比率
+    var scale:CGFloat = 0.3 //拡大,縮小比率
     var imageBetweenWidth:CGFloat = 10 //文字間の幅
     
     
@@ -44,7 +44,7 @@ class PreviewViewController: UIViewController {
                 totalWidth = 50
                 totalHeight += 50
             default:
-                initImageView(characters![i] + ".png")
+                initImageView("alphabet/" + characters![i] + ".jpg")
             }
         }
     }
