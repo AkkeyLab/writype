@@ -24,7 +24,7 @@ public class CreateFontViewController: UIViewController {
     public var showsSaveSignatureOption: Bool = true
     public weak var signatureDelegate: EPSignatureDelegate?
     public var subtitleText = "Sign Here"
-    public var tintColor = UIColor.defaultTintColor()
+    public var tintColor = UIColor.defaultTintColor() // バーアイテムの色変更はここで行う
 
     // MARK: - Life cycle methods
     override public func viewDidLoad() {
@@ -39,27 +39,14 @@ public class CreateFontViewController: UIViewController {
         let clearButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Trash, target: self, action: #selector(CreateFontViewController.onTouchClearButton))
         clearButton.tintColor = tintColor
 
-//        if showsDate {
-//            let dateFormatter = NSDateFormatter()
-//            dateFormatter.dateFormat = "dd MMMM YYYY"
-//            lblDate.text = dateFormatter.stringFromDate(NSDate())
+//        if showsSaveSignatureOption {
+//            let actionButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: #selector(CreateFontViewController.onTouchActionButton(_:)))
+//            actionButton.tintColor = tintColor
+//            self.navigationItem.rightBarButtonItems = [doneButton, clearButton, actionButton]
 //        } else {
-//            lblDate.hidden = false
+//            self.navigationItem.rightBarButtonItems = [doneButton, clearButton]
 //        }
-
-        if showsSaveSignatureOption {
-            let actionButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: #selector(CreateFontViewController.onTouchActionButton(_:)))
-            actionButton.tintColor = tintColor
-            self.navigationItem.rightBarButtonItems = [doneButton, clearButton, actionButton]
-//            switchSaveSignature.onTintColor = tintColor
-        } else {
-            self.navigationItem.rightBarButtonItems = [doneButton, clearButton]
-//            lblDefaultSignature.hidden = true
-//            switchSaveSignature.hidden = true
-        }
-
-//        lblSignatureSubtitle.text = subtitleText
-//        switchSaveSignature.setOn(false, animated: true)
+        self.navigationItem.rightBarButtonItems = [doneButton, clearButton]
     }
 
     override public func didReceiveMemoryWarning() {
@@ -91,47 +78,57 @@ public class CreateFontViewController: UIViewController {
 
     // MARK: - Button Actions
 
+    // 戻る操作に相当する
     func onTouchCancelButton() {
 //        signatureDelegate?.epSignature!(self, didCancel: NSError(domain: "EPSignatureDomain", code: 1, userInfo: [NSLocalizedDescriptionKey: "User not signed"]))
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    // 文字が書かれていれば前の画面に戻る動作を提供
+    // 戻る動作を変更しつつ、左右の次の文字を押したときにここが呼ばれるように変更を行う
     func onTouchDoneButton() {
         if let signature = signatureView.getSignatureAsImage() {
+            // ここが画像の保存部分。
 //            if switchSaveSignature.on {
-//                let docPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first
-//                let filePath = (docPath! as NSString).stringByAppendingPathComponent("sig.data")
-//                signatureView.saveSignature(filePath)
-//            }
-//            signatureDelegate?.epSignature!(self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
-            dismissViewControllerAnimated(true, completion: nil)
-        } else {
-            showAlert("You did not sign", andTitle: "Please draw your signature")
-        }
-    }
-
-    func onTouchActionButton(barButton: UIBarButtonItem) {
-        let action = UIAlertController(title: "Action", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
-        action.view.tintColor = tintColor
-
-        action.addAction(UIAlertAction(title: "Load default signature", style: UIAlertActionStyle.Default, handler: { action in
             let docPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first
             let filePath = (docPath! as NSString).stringByAppendingPathComponent("sig.data")
-            self.signatureView.loadSignature(filePath)
-            }))
-
-        action.addAction(UIAlertAction(title: "Delete default signature", style: UIAlertActionStyle.Destructive, handler: { action in
-            self.signatureView.removeSignature()
-            }))
-
-        action.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
-
-        if let popOver = action.popoverPresentationController {
-            popOver.barButtonItem = barButton
+            signatureView.saveSignature(filePath)
+//            }
+//            signatureDelegate?.epSignature!(self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
+            // 一時的に閉じないようにしている
+//            dismissViewControllerAnimated(true, completion: nil)
+            // とりあえず、ライブラリに保存する
+            UIImageWriteToSavedPhotosAlbum(signatureView.getSignatureAsImage()!, self, nil, nil)
+            signatureView.clear()
+            showAlert("手書き文字の保存が完了しました", andTitle: "保存完了")
+        } else {
+            showAlert("全文字の入力が完了しておりません。作業を中断する場合はキャンセルを行ってください。", andTitle: "未完了")
         }
-        presentViewController(action, animated: true, completion: nil)
     }
 
+//    func onTouchActionButton(barButton: UIBarButtonItem) {
+//        let action = UIAlertController(title: "Action", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
+//        action.view.tintColor = tintColor
+//
+//        action.addAction(UIAlertAction(title: "Load default signature", style: UIAlertActionStyle.Default, handler: { action in
+//            let docPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first
+//            let filePath = (docPath! as NSString).stringByAppendingPathComponent("sig.data")
+//            self.signatureView.loadSignature(filePath)
+//            }))
+//
+//        action.addAction(UIAlertAction(title: "Delete default signature", style: UIAlertActionStyle.Destructive, handler: { action in
+//            self.signatureView.removeSignature()
+//            }))
+//
+//        action.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+//
+//        if let popOver = action.popoverPresentationController {
+//            popOver.barButtonItem = barButton
+//        }
+//        presentViewController(action, animated: true, completion: nil)
+//    }
+
+    // 文字の削除を行うボタンに割り当てる
     func onTouchClearButton() {
         signatureView.clear()
     }

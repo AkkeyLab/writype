@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -48,23 +48,21 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJP-h8-6zU" customClass="EPSignatureView" customModule="writype" customModuleProvider="target">
                     <rect key="frame" x="180" y="180" width="240" height="240"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdn-1v-0zQ">
-                            <rect key="frame" x="0.0" y="219" width="240" height="21"/>
-                            <color key="backgroundColor" red="0.078431372550000003" green="0.64705882349999999" blue="1" alpha="0.20008973820000001" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="Gdn-1v-0zQ" secondAttribute="bottom" id="4Xz-LW-8Ot"/>
                         <constraint firstAttribute="width" secondItem="cJP-h8-6zU" secondAttribute="height" multiplier="1:1" id="I0G-32-CHc"/>
-                        <constraint firstItem="Gdn-1v-0zQ" firstAttribute="leading" secondItem="cJP-h8-6zU" secondAttribute="leading" id="Y8G-Az-J96"/>
-                        <constraint firstAttribute="trailing" secondItem="Gdn-1v-0zQ" secondAttribute="trailing" id="pAB-s4-P8P"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdn-1v-0zQ">
+                    <rect key="frame" x="180" y="390" width="240" height="30"/>
+                    <color key="backgroundColor" red="0.078431372550000003" green="0.64705882349999999" blue="1" alpha="0.20008973820000001" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="XpU-8C-pFD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-dg-PvH">
                     <rect key="frame" x="0.0" y="448" width="600" height="152"/>
                     <subviews>
@@ -149,8 +147,10 @@
                 <constraint firstItem="cJP-h8-6zU" firstAttribute="top" secondItem="L2N-4u-OHu" secondAttribute="bottom" constant="20" id="0dx-F5-e0S"/>
                 <constraint firstAttribute="bottom" secondItem="eBt-iP-83a" secondAttribute="bottom" id="3PB-LH-4Ky"/>
                 <constraint firstItem="L2N-4u-OHu" firstAttribute="leading" secondItem="4ea-fF-Dj8" secondAttribute="trailing" id="3dD-19-ysR"/>
+                <constraint firstItem="Gdn-1v-0zQ" firstAttribute="leading" secondItem="aZ5-25-7IU" secondAttribute="trailing" constant="40" id="8Aa-ku-QXr"/>
                 <constraint firstItem="tlQ-g7-nZb" firstAttribute="top" secondItem="aZ5-25-7IU" secondAttribute="bottom" constant="8" id="EVE-0c-2Wk"/>
                 <constraint firstItem="4ea-fF-Dj8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FR7-BW-hIK"/>
+                <constraint firstItem="tlQ-g7-nZb" firstAttribute="top" secondItem="Gdn-1v-0zQ" secondAttribute="bottom" constant="8" id="GbL-P0-Ift"/>
                 <constraint firstItem="cJP-h8-6zU" firstAttribute="leading" secondItem="aZ5-25-7IU" secondAttribute="trailing" constant="40" id="HNt-2v-n5o"/>
                 <constraint firstItem="cJP-h8-6zU" firstAttribute="height" secondItem="4ea-fF-Dj8" secondAttribute="height" multiplier="0.4:1" id="LTz-rn-22L"/>
                 <constraint firstAttribute="trailing" secondItem="L2N-4u-OHu" secondAttribute="trailing" id="NQL-Zn-Ccr"/>
@@ -160,6 +160,7 @@
                 <constraint firstItem="0fg-dg-PvH" firstAttribute="top" secondItem="tlQ-g7-nZb" secondAttribute="bottom" constant="20" id="UUA-Mf-cyL"/>
                 <constraint firstItem="Zzj-Al-BrT" firstAttribute="height" secondItem="cJP-h8-6zU" secondAttribute="height" multiplier="1:2" id="VP5-Kw-AUg"/>
                 <constraint firstAttribute="trailing" secondItem="tlQ-g7-nZb" secondAttribute="trailing" id="Wkf-An-nhH"/>
+                <constraint firstItem="Zzj-Al-BrT" firstAttribute="leading" secondItem="Gdn-1v-0zQ" secondAttribute="trailing" constant="40" id="XhN-LY-TUj"/>
                 <constraint firstItem="aZ5-25-7IU" firstAttribute="height" secondItem="cJP-h8-6zU" secondAttribute="height" multiplier="1:2" id="Yup-18-X5d"/>
                 <constraint firstItem="L2N-4u-OHu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bBD-jV-aKN"/>
                 <constraint firstItem="h4u-hA-PC4" firstAttribute="width" secondItem="Zzj-Al-BrT" secondAttribute="width" multiplier="1:3" id="dr1-MH-3Ef"/>
