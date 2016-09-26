@@ -9,10 +9,11 @@
 import UIKit
 
 class PreviewViewController: UIViewController {
-   
-    var text1: String?
     
-    var imageView:UIImageView!
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    var text1: String?//入力した文字列
+    
     
     //各画像の幅、高さ
     var imageWidth:CGFloat = 0
@@ -31,6 +32,7 @@ class PreviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.contentSize = CGSizeMake(4000, self.view.frame.size.height)
         
         let lowertext = text1?.lowercaseString //小文字に変換
         let characters = lowertext?.characters.map { String($0) } // String -> [String]
@@ -97,7 +99,7 @@ class PreviewViewController: UIViewController {
         totalWidth += imageWidth * scale + imageBetweenWidth
         if(totalWidth > screenWidth){
             totalWidth = 50
-            totalHeight += imageHeight * scale + 10
+            totalHeight += imageHeight * scale
         }
     }
     

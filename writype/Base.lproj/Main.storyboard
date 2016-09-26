@@ -302,14 +302,18 @@
             <objects>
                 <viewController id="y0b-54-nba" customClass="PreviewViewController" customModule="writype" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="J3U-Hh-0ef"/>
-                        <viewControllerLayoutGuide type="bottom" id="cbt-Tt-Pht"/>
+                        <viewControllerLayoutGuide type="top" id="qld-Zz-ftn"/>
+                        <viewControllerLayoutGuide type="bottom" id="ssM-lV-3LI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="z8g-Vy-6TG">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="mqK-pN-vmw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ddM-2N-00f">
+                                <rect key="frame" x="170" y="195" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                    </scrollView>
                     <navigationItem key="navigationItem" title="Preview" id="A16-0D-eTL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="NAi-bO-L8g">
                             <connections>
@@ -318,7 +322,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="view" destination="z8g-Vy-6TG" id="qmC-qV-Ctn"/>
+                        <outlet property="imageView" destination="ddM-2N-00f" id="Yda-gV-fuS"/>
+                        <outlet property="scrollView" destination="mqK-pN-vmw" id="WZM-YP-jF1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5AG-LM-Zyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
