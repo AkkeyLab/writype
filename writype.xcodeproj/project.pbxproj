@@ -24,6 +24,7 @@
 		6627A53F1D72DF9A00221C25 /* EPSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A53E1D72DF9A00221C25 /* EPSignatureView.swift */; };
 		6627A5411D72DFA300221C25 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A5401D72DFA300221C25 /* EPExtensions.swift */; };
 		6627A5961D756B7A00221C25 /* EPSignatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6627A5951D756B7A00221C25 /* EPSignatureViewController.xib */; };
+		66B2D9481DA1D867004BBEED /* PDFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9471DA1D867004BBEED /* PDFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +58,6 @@
 		2C2527CA1D3D197100B58239 /* writypeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writypeUITests.swift; sourceTree = "<group>"; };
 		2C2527CC1D3D197100B58239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CCFF2231D92D86700077B9E /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewViewController.swift; path = ViewController/CreateReport/PreviewViewController.swift; sourceTree = "<group>"; };
-		2CCFF2271D961E1500077B9E /* 0B7FEC51-4F15-3B05-8701-16D98BDA0D10.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; name = "0B7FEC51-4F15-3B05-8701-16D98BDA0D10.bcsymbolmap"; path = "Carthage/Build/iOS/0B7FEC51-4F15-3B05-8701-16D98BDA0D10.bcsymbolmap"; sourceTree = "<group>"; };
 		2CCFF22D1D9649D600077B9E /* BigShot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BigShot.framework; path = Carthage/Build/iOS/BigShot.framework; sourceTree = "<group>"; };
 		2CCFF2CE1D97997500077B9E /* alphabet */ = {isa = PBXFileReference; lastKnownFileType = folder; name = alphabet; path = Resource/alphabet; sourceTree = "<group>"; };
 		6627A52A1D72AF1400221C25 /* SearchFontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchFontViewController.swift; path = ViewController/SearchFont/SearchFontViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +68,7 @@
 		6627A53E1D72DF9A00221C25 /* EPSignatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EPSignatureView.swift; path = View/CreateFont/EPSignatureView.swift; sourceTree = "<group>"; };
 		6627A5401D72DFA300221C25 /* EPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EPExtensions.swift; path = View/CreateFont/EPExtensions.swift; sourceTree = "<group>"; };
 		6627A5951D756B7A00221C25 /* EPSignatureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EPSignatureViewController.xib; path = Layout/EPSignatureViewController.xib; sourceTree = "<group>"; };
+		66B2D9471DA1D867004BBEED /* PDFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFramework.framework; path = Carthage/Build/iOS/PDFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66B2D9481DA1D867004BBEED /* PDFramework.framework in Frameworks */,
 				2CCFF22E1D9649D600077B9E /* BigShot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,8 +101,8 @@
 		2C25279E1D3D197000B58239 = {
 			isa = PBXGroup;
 			children = (
+				66B2D9471DA1D867004BBEED /* PDFramework.framework */,
 				2CCFF22D1D9649D600077B9E /* BigShot.framework */,
-				2CCFF2271D961E1500077B9E /* 0B7FEC51-4F15-3B05-8701-16D98BDA0D10.bcsymbolmap */,
 				2C2527A91D3D197000B58239 /* writype */,
 				2C2527BE1D3D197100B58239 /* writypeTests */,
 				2C2527C91D3D197100B58239 /* writypeUITests */,
@@ -455,6 +457,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/BigShot.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PDFramework.framework",
 			);
 			outputPaths = (
 			);
