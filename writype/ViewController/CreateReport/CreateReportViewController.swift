@@ -42,7 +42,7 @@ class CreateReportViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var previewViewController = segue.destinationViewController as! PreviewViewController
+        let previewViewController = segue.destinationViewController as! PreviewViewController
         previewViewController.text1 = reportText.text
     }
 

@@ -87,7 +87,7 @@ public class CreateFontViewController: UIViewController {
     // 文字が書かれていれば前の画面に戻る動作を提供
     // 戻る動作を変更しつつ、左右の次の文字を押したときにここが呼ばれるように変更を行う
     func onTouchDoneButton() {
-        if let signature = signatureView.getSignatureAsImage() {
+        if signatureView.getSignatureAsImage() != nil {
             // ここが画像の保存部分。
 //            if switchSaveSignature.on {
             let docPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first
