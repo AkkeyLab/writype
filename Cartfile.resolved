@@ -1,1 +1,2 @@
 github "tapthaker/BigShot" "0.1"
+git "https://gitlab.planningdev.com/planningdev/iOS_PDFramework.git" "1.0.1"
