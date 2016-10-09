@@ -55,7 +55,7 @@ public class EPSignatureView: UIView {
 
     func addLongPressGesture() {
         // Long press gesture is used to keep clear dots in the canvas
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(EPSignatureView.longPressed(_:)))
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: .longPressed)
         longPressGesture.minimumPressDuration = 1.5
         self.addGestureRecognizer(longPressGesture)
     }
@@ -183,5 +183,8 @@ public class EPSignatureView: UIView {
             print(error)
         }
     }
+}
 
+private extension Selector {
+    static let longPressed = #selector(EPSignatureView.longPressed(_:))
 }

@@ -30,13 +30,13 @@ public class CreateFontViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: #selector(CreateFontViewController.onTouchCancelButton))
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: .cancelTapped)
         cancelButton.tintColor = tintColor
         self.navigationItem.leftBarButtonItem = cancelButton
 
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: #selector(CreateFontViewController.onTouchDoneButton))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: .doneTapped)
         doneButton.tintColor = tintColor
-        let clearButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Trash, target: self, action: #selector(CreateFontViewController.onTouchClearButton))
+        let clearButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Trash, target: self, action: .clearTapped)
         clearButton.tintColor = tintColor
 
 //        if showsSaveSignatureOption {
@@ -132,15 +132,10 @@ public class CreateFontViewController: UIViewController {
     func onTouchClearButton() {
         signatureView.clear()
     }
+}
 
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
+private extension Selector {
+    static let doneTapped = #selector(CreateFontViewController.onTouchDoneButton)
+    static let cancelTapped = #selector(CreateFontViewController.onTouchCancelButton)
+    static let clearTapped = #selector(CreateFontViewController.onTouchClearButton)
 }
