@@ -26,6 +26,28 @@ public class CreateFontViewController: UIViewController {
     public var subtitleText = "Sign Here"
     public var tintColor = UIColor.defaultTintColor() // バーアイテムの色変更はここで行う
 
+    // MARK: - Initializers
+
+    public convenience init(signatureDelegate: EPSignatureDelegate) {
+        self.init(signatureDelegate: signatureDelegate, showsDate: true, showsSaveSignatureOption: true)
+    }
+
+    public convenience init(signatureDelegate: EPSignatureDelegate, showsDate: Bool) {
+        self.init(signatureDelegate: signatureDelegate, showsDate: showsDate, showsSaveSignatureOption: true)
+    }
+
+    public init(signatureDelegate: EPSignatureDelegate, showsDate: Bool, showsSaveSignatureOption: Bool) {
+        self.showsDate = showsDate
+        self.showsSaveSignatureOption = showsSaveSignatureOption
+        self.signatureDelegate = signatureDelegate
+        let bundle = NSBundle(forClass: CreateFontViewController.self)
+        super.init(nibName: "EPSignatureViewController", bundle: bundle)
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     // MARK: - Life cycle methods
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -52,28 +74,6 @@ public class CreateFontViewController: UIViewController {
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Initializers
-
-    public convenience init(signatureDelegate: EPSignatureDelegate) {
-        self.init(signatureDelegate: signatureDelegate, showsDate: true, showsSaveSignatureOption: true)
-    }
-
-    public convenience init(signatureDelegate: EPSignatureDelegate, showsDate: Bool) {
-        self.init(signatureDelegate: signatureDelegate, showsDate: showsDate, showsSaveSignatureOption: true)
-    }
-
-    public init(signatureDelegate: EPSignatureDelegate, showsDate: Bool, showsSaveSignatureOption: Bool) {
-        self.showsDate = showsDate
-        self.showsSaveSignatureOption = showsSaveSignatureOption
-        self.signatureDelegate = signatureDelegate
-        let bundle = NSBundle(forClass: CreateFontViewController.self)
-        super.init(nibName: "EPSignatureViewController", bundle: bundle)
-    }
-
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - Button Actions
