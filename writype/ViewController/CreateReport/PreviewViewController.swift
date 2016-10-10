@@ -12,7 +12,8 @@ class PreviewViewController: UIViewController {
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
-    var text1: String?//入力した文字列
+    //入力した文字列
+    var text1: String?
     
     //各画像の幅、高さ
     var imageWidth:CGFloat = 0
@@ -23,7 +24,7 @@ class PreviewViewController: UIViewController {
     var totalHeight:CGFloat = 200
     
     
-    var scale:CGFloat = 0.2 //拡大,縮小比率
+    var scale:CGFloat = 0.3 //拡大,縮小比率
     var imageBetweenWidth:CGFloat = 0 //文字間の幅
     
     
