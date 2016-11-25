@@ -18,6 +18,7 @@ public class CreateFontViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var signatureView: EPSignatureView!
+    @IBOutlet weak var selectLabel: UILabel!
 
     // MARK: - Public Vars
     public var showsDate: Bool = true
@@ -25,6 +26,9 @@ public class CreateFontViewController: UIViewController {
     public weak var signatureDelegate: EPSignatureDelegate?
     public var subtitleText = "Sign Here"
     public var tintColor = UIColor.defaultTintColor() // バーアイテムの色変更はここで行う
+    public var nowAlphabet = "A"
+
+    private let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
     // MARK: - Initializers
 
@@ -91,12 +95,20 @@ public class CreateFontViewController: UIViewController {
             // 一時的に閉じないようにしている
 //            dismissViewControllerAnimated(true, completion: nil)
             // とりあえず、ライブラリに保存する
-            UIImageWriteToSavedPhotosAlbum(signatureView.getSignatureAsImage()!, self, nil, nil)
+//            UIImageWriteToSavedPhotosAlbum(signatureView.getSignatureAsImage()!, self, nil, nil)
+            // デバイス保存
+            saveImageDocumentDirectory(nowAlphabet, image: signatureView.getSignatureAsImage()!)
+
             signatureView.clear()
             showAlert("手書き文字の保存が完了しました", andTitle: "保存完了")
         } else {
             showAlert("全文字の入力が完了しておりません。作業を中断する場合はキャンセルを行ってください。", andTitle: "未完了")
         }
+    }
+
+    @IBAction func changeAlphabet(sender: UIStepper) {
+        nowAlphabet = alphabet[Int(sender.value)]
+        selectLabel.text = nowAlphabet
     }
 
     // 文字の削除を行うボタンに割り当てる

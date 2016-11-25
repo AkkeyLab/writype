@@ -24,6 +24,7 @@
 		6627A53F1D72DF9A00221C25 /* EPSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A53E1D72DF9A00221C25 /* EPSignatureView.swift */; };
 		6627A5411D72DFA300221C25 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627A5401D72DFA300221C25 /* EPExtensions.swift */; };
 		6627A5961D756B7A00221C25 /* EPSignatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6627A5951D756B7A00221C25 /* EPSignatureViewController.xib */; };
+		664DE84C1DE880F700F1243B /* DocumentDirectoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664DE84B1DE880F700F1243B /* DocumentDirectoryController.swift */; };
 		66B2D9481DA1D867004BBEED /* PDFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B2D9471DA1D867004BBEED /* PDFramework.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		6627A53E1D72DF9A00221C25 /* EPSignatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EPSignatureView.swift; path = View/CreateFont/EPSignatureView.swift; sourceTree = "<group>"; };
 		6627A5401D72DFA300221C25 /* EPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EPExtensions.swift; path = View/CreateFont/EPExtensions.swift; sourceTree = "<group>"; };
 		6627A5951D756B7A00221C25 /* EPSignatureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EPSignatureViewController.xib; path = Layout/EPSignatureViewController.xib; sourceTree = "<group>"; };
+		664DE84B1DE880F700F1243B /* DocumentDirectoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DocumentDirectoryController.swift; path = ViewController/SearchFont/DocumentDirectoryController.swift; sourceTree = "<group>"; };
 		66B2D9471DA1D867004BBEED /* PDFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFramework.framework; path = Carthage/Build/iOS/PDFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				6627A5301D72AF5100221C25 /* CreateFontViewController.swift */,
+				664DE84B1DE880F700F1243B /* DocumentDirectoryController.swift */,
 			);
 			name = CreateFont;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 			files = (
 				6627A52D1D72AF3600221C25 /* CreateReportViewController.swift in Sources */,
 				6627A52F1D72AF4200221C25 /* CharacterTableVIewController.swift in Sources */,
+				664DE84C1DE880F700F1243B /* DocumentDirectoryController.swift in Sources */,
 				6627A5411D72DFA300221C25 /* EPExtensions.swift in Sources */,
 				6627A5311D72AF5100221C25 /* CreateFontViewController.swift in Sources */,
 				2C2527AB1D3D197000B58239 /* AppDelegate.swift in Sources */,
