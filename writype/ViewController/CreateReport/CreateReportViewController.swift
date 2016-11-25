@@ -14,21 +14,19 @@ class CreateReportViewController: UIViewController {
     var saveText = ""
     @IBAction func previewButton(sender: AnyObject) {
     }
-   
-  
+
     @IBAction func deleteButton(sender: AnyObject) {
         reportText.text = ""
     }
-    
+
     @IBAction func saveButton(sender: AnyObject) {
         saveText = reportText.text
     }
-   
+
     @IBAction func refreshButton(sender: AnyObject) {
         reportText.text = saveText
     }
-   
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         reportText.text = ""
@@ -39,8 +37,7 @@ class CreateReportViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let previewViewController = segue.destinationViewController as! PreviewViewController
         previewViewController.text1 = reportText.text

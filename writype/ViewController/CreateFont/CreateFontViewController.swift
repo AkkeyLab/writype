@@ -18,6 +18,7 @@ public class CreateFontViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var signatureView: EPSignatureView!
+    @IBOutlet weak var selectLabel: UILabel!
 
     // MARK: - Public Vars
     public var showsDate: Bool = true
@@ -25,6 +26,9 @@ public class CreateFontViewController: UIViewController {
     public weak var signatureDelegate: EPSignatureDelegate?
     public var subtitleText = "Sign Here"
     public var tintColor = UIColor.defaultTintColor() // バーアイテムの色変更はここで行う
+    public var nowAlphabet = "A"
+
+    private let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
     // MARK: - Initializers
 
@@ -61,13 +65,6 @@ public class CreateFontViewController: UIViewController {
         let clearButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Trash, target: self, action: .clearTapped)
         clearButton.tintColor = tintColor
 
-//        if showsSaveSignatureOption {
-//            let actionButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: #selector(CreateFontViewController.onTouchActionButton(_:)))
-//            actionButton.tintColor = tintColor
-//            self.navigationItem.rightBarButtonItems = [doneButton, clearButton, actionButton]
-//        } else {
-//            self.navigationItem.rightBarButtonItems = [doneButton, clearButton]
-//        }
         self.navigationItem.rightBarButtonItems = [doneButton, clearButton]
     }
 
@@ -98,7 +95,10 @@ public class CreateFontViewController: UIViewController {
             // 一時的に閉じないようにしている
 //            dismissViewControllerAnimated(true, completion: nil)
             // とりあえず、ライブラリに保存する
-            UIImageWriteToSavedPhotosAlbum(signatureView.getSignatureAsImage()!, self, nil, nil)
+//            UIImageWriteToSavedPhotosAlbum(signatureView.getSignatureAsImage()!, self, nil, nil)
+            // デバイス保存
+            saveImageDocumentDirectory(nowAlphabet, image: signatureView.getSignatureAsImage()!)
+
             signatureView.clear()
             showAlert("手書き文字の保存が完了しました", andTitle: "保存完了")
         } else {
@@ -106,27 +106,10 @@ public class CreateFontViewController: UIViewController {
         }
     }
 
-//    func onTouchActionButton(barButton: UIBarButtonItem) {
-//        let action = UIAlertController(title: "Action", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
-//        action.view.tintColor = tintColor
-//
-//        action.addAction(UIAlertAction(title: "Load default signature", style: UIAlertActionStyle.Default, handler: { action in
-//            let docPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first
-//            let filePath = (docPath! as NSString).stringByAppendingPathComponent("sig.data")
-//            self.signatureView.loadSignature(filePath)
-//            }))
-//
-//        action.addAction(UIAlertAction(title: "Delete default signature", style: UIAlertActionStyle.Destructive, handler: { action in
-//            self.signatureView.removeSignature()
-//            }))
-//
-//        action.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
-//
-//        if let popOver = action.popoverPresentationController {
-//            popOver.barButtonItem = barButton
-//        }
-//        presentViewController(action, animated: true, completion: nil)
-//    }
+    @IBAction func changeAlphabet(sender: UIStepper) {
+        nowAlphabet = alphabet[Int(sender.value)].lowercaseString // 小文字
+        selectLabel.text = alphabet[Int(sender.value)]
+    }
 
     // 文字の削除を行うボタンに割り当てる
     func onTouchClearButton() {
