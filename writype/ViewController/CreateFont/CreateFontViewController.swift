@@ -61,13 +61,6 @@ public class CreateFontViewController: UIViewController {
         let clearButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Trash, target: self, action: .clearTapped)
         clearButton.tintColor = tintColor
 
-//        if showsSaveSignatureOption {
-//            let actionButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: #selector(CreateFontViewController.onTouchActionButton(_:)))
-//            actionButton.tintColor = tintColor
-//            self.navigationItem.rightBarButtonItems = [doneButton, clearButton, actionButton]
-//        } else {
-//            self.navigationItem.rightBarButtonItems = [doneButton, clearButton]
-//        }
         self.navigationItem.rightBarButtonItems = [doneButton, clearButton]
     }
 
@@ -105,28 +98,6 @@ public class CreateFontViewController: UIViewController {
             showAlert("全文字の入力が完了しておりません。作業を中断する場合はキャンセルを行ってください。", andTitle: "未完了")
         }
     }
-
-//    func onTouchActionButton(barButton: UIBarButtonItem) {
-//        let action = UIAlertController(title: "Action", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
-//        action.view.tintColor = tintColor
-//
-//        action.addAction(UIAlertAction(title: "Load default signature", style: UIAlertActionStyle.Default, handler: { action in
-//            let docPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first
-//            let filePath = (docPath! as NSString).stringByAppendingPathComponent("sig.data")
-//            self.signatureView.loadSignature(filePath)
-//            }))
-//
-//        action.addAction(UIAlertAction(title: "Delete default signature", style: UIAlertActionStyle.Destructive, handler: { action in
-//            self.signatureView.removeSignature()
-//            }))
-//
-//        action.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
-//
-//        if let popOver = action.popoverPresentationController {
-//            popOver.barButtonItem = barButton
-//        }
-//        presentViewController(action, animated: true, completion: nil)
-//    }
 
     // 文字の削除を行うボタンに割り当てる
     func onTouchClearButton() {
