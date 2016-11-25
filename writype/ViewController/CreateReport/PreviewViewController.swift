@@ -42,7 +42,7 @@ class PreviewViewController: UIViewController {
                 totalWidth = 50
                 totalHeight += 50
             default:
-                initImageView("alphabet/" + characters![i] + ".jpg")
+                initImageView(characters![i])
             }
         }
     }
@@ -65,7 +65,7 @@ class PreviewViewController: UIViewController {
 
     private func initImageView(img: String) {
         // UIImage インスタンスの生成
-        let image1: UIImage = UIImage(named: img)!
+        let image1: UIImage = getImage(img)
 
         // UIImageView 初期化
         let imageView = UIImageView(image: image1)
@@ -94,6 +94,27 @@ class PreviewViewController: UIViewController {
             totalWidth = 50
             totalHeight += imageHeight * scale
         }
+    }
+
+    // ここは重複するべきではない
+    func getImage(name: String) -> UIImage {
+        var outputImage: UIImage = UIImage(named: "alphabet/" + name + ".jpg")!
+
+        let fileManager = NSFileManager.defaultManager()
+        let imagePAth = (self.getDirectoryPath() as NSString).stringByAppendingPathComponent(name + ".jpg")
+        if fileManager.fileExistsAtPath(imagePAth) {
+            outputImage = UIImage(contentsOfFile: imagePAth)!
+        } else {
+            print("No Image")
+        }
+
+        return outputImage
+    }
+
+    func getDirectoryPath() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
     }
 
     override func didReceiveMemoryWarning() {

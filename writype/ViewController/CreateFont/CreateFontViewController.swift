@@ -107,8 +107,8 @@ public class CreateFontViewController: UIViewController {
     }
 
     @IBAction func changeAlphabet(sender: UIStepper) {
-        nowAlphabet = alphabet[Int(sender.value)]
-        selectLabel.text = nowAlphabet
+        nowAlphabet = alphabet[Int(sender.value)].lowercaseString // 小文字
+        selectLabel.text = alphabet[Int(sender.value)]
     }
 
     // 文字の削除を行うボタンに割り当てる

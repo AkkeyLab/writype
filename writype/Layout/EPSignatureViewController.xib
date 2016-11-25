@@ -142,7 +142,7 @@
                         <constraint firstAttribute="height" id="cet-mR-ZRa"/>
                     </constraints>
                 </view>
-                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-CA-4q9">
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-CA-4q9">
                     <rect key="frame" x="253" y="428" width="94" height="29"/>
                     <connections>
                         <action selector="changeAlphabet:" destination="-1" eventType="valueChanged" id="GlM-Cg-YGG"/>
